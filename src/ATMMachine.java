@@ -24,11 +24,11 @@ class ATM{
     }
 
     public void  menu(){
-        System.out.printf("Enter Your Choice:\n");
-        System.out.printf("1. Check Your A/C Balance\n");
-        System.out.printf("2. Deposit Money:\n");
-        System.out.printf("3. Withdraw Money:\n");
-        System.out.printf("4. Exit:\n");
+        System.out.println("Enter Your Choice:\n");
+        System.out.println("1. Check Your A/C Balance\n");
+        System.out.println("2. Deposit Money:\n");
+        System.out.println("3. Withdraw Money:\n");
+        System.out.println("4. Exit:\n");
 
         Scanner sc = new Scanner(System.in);
         int option = sc.nextInt();
@@ -55,7 +55,7 @@ class ATM{
     }
 
     public void deposit(){
-        System.out.printf("Enter the amount you want to deposit: ");
+        System.out.println("Enter the amount you want to deposit: ");
         Scanner sc = new Scanner(System.in);
         float enterMoney = sc.nextInt();
         Balance = Balance + enterMoney;
@@ -65,7 +65,7 @@ class ATM{
     }
 
     public void withdraw(){
-        System.out.printf("Enter the amount you want to withdraw: ");
+        System.out.println("Enter the amount you want to withdraw: ");
         Scanner sc = new Scanner(System.in);
         int enterMoney = sc.nextInt();
         if(enterMoney > Balance){
