@@ -24,11 +24,11 @@ class ATM{
     }
 
     public void  menu(){
-        System.out.println("Enter Your Choice:\n");
-        System.out.println("1. Check Your A/C Balance\n");
-        System.out.println("2. Deposit Money:\n");
-        System.out.println("3. Withdraw Money:\n");
-        System.out.println("4. Exit:\n");
+        System.out.println("Enter Your Choice:");
+        System.out.println("1. Check Your A/C Balance");
+        System.out.println("2. Deposit Money:");
+        System.out.println("3. Withdraw Money:");
+        System.out.println("4. Exit:");
 
         Scanner sc = new Scanner(System.in);
         int option = sc.nextInt();
@@ -57,7 +57,7 @@ class ATM{
     public void deposit(){
         System.out.println("Enter the amount you want to deposit: ");
         Scanner sc = new Scanner(System.in);
-        float enterMoney = sc.nextInt();
+        float enterMoney = sc.nextFloat();
         Balance = Balance + enterMoney;
         System.out.println(enterMoney + " money has been Credited to your Account successfully\n" +
                 "Total A/C Balance " + Balance);
@@ -67,7 +67,7 @@ class ATM{
     public void withdraw(){
         System.out.println("Enter the amount you want to withdraw: ");
         Scanner sc = new Scanner(System.in);
-        int enterMoney = sc.nextInt();
+        float enterMoney = sc.nextFloat();
         if(enterMoney > Balance){
             System.out.println("Insufficient Balance in A/C");
         }
